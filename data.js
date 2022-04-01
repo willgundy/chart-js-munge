@@ -1,4 +1,4 @@
-export default [
+export const customerData = [
   {
     'id': 1,
     'first_name': 'Suzi',
