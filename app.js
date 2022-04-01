@@ -74,11 +74,60 @@ const purchaseFrequencyBarChart = new Chart(
 
 const coolFactorCount = makeCountObject(customerData, 'cool_factor');
 
-console.log(coolFactorCount);
+const data = {
+    labels: Object.keys(coolFactorCount),
+    datasets: [{
+        label: 'Cool Factor',
+        data: Object.values(coolFactorCount),
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.1
+    }]
+};
+
+const lineChartConfig = {
+    type: 'line',
+    data: data,
+};
+
+const coolFactorLineChart = new Chart(
+    document.getElementById('myLineChart'),
+    lineChartConfig
+);
 
 
 // Pie chart showing number of customers by each gender. Make sure you have enough colors in your chart data to make the pie chart readable.
 
+const genderCount = makeCountObject(customerData, 'gender');
+
+const pieData = {
+    labels: Object.keys(genderCount),
+    datasets: [{
+        label: 'Genders',
+        data: Object.values(genderCount),
+        backgroundColor: [
+            'rgb(54, 162, 235)',
+            'rgb(255, 99, 132)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            'rgb(201, 203, 207)',
+            'rgb(10, 203, 207)'
+        ],
+        hoverOffset: 4
+    }]
+};
+
+const pieConfig = {
+    type: 'doughnut',
+    data: pieData,
+};
+
+const genderPieChart = new Chart(
+    document.getElementById('myPieChart'),
+    pieConfig
+);
 
 
 
