@@ -58,6 +58,7 @@ const barChartConfig = {
     },
 };
 
+// eslint-disable-next-line no-undef
 new Chart(
     document.getElementById('myBarChart'),
     barChartConfig
@@ -99,6 +100,7 @@ const lineChartConfig = {
     }
 };
 
+// eslint-disable-next-line no-undef
 new Chart(
     document.getElementById('myLineChart'),
     lineChartConfig
@@ -148,6 +150,7 @@ const pieConfig = {
     }
 };
 
+// eslint-disable-next-line no-undef
 new Chart(
     document.getElementById('myPieChart'),
     pieConfig
@@ -160,7 +163,6 @@ new Chart(
 // 4. Bar chart showing average cool factor of each age demographic (0 - 10, 11 - 20, 21 - 30, etc)
 const coolFactorByAge = makeAverageObject(customerData, 'age', 'cool_factor');
 
-console.log(coolFactorByAge);
 
 const coolFactorBarChartData = {
     labels: Object.keys(coolFactorByAge),
@@ -211,6 +213,7 @@ const secondBarChartConfig = {
     }
 };
 
+// eslint-disable-next-line no-undef
 new Chart(
     document.getElementById('mySecondBarChart'),
     secondBarChartConfig
@@ -276,6 +279,7 @@ const secondlineChartConfig = {
     }
 };
 
+// eslint-disable-next-line no-undef
 new Chart(
     document.getElementById('mySecondLineChart'),
     secondlineChartConfig
@@ -368,6 +372,7 @@ const thirdlineChartConfig = {
     }
 };
 
+// eslint-disable-next-line no-undef
 new Chart(
     document.getElementById('myThirdLineChart'),
     thirdlineChartConfig
