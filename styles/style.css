@@ -36,6 +36,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: calc(var(--footer-height));
 }
 
@@ -88,4 +89,15 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 80vw;
+    min-height: 40vh;
+}
+
+canvas {
+    padding: 10px;
 }
